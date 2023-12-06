@@ -1,4 +1,13 @@
 /** @type {import('tailwindcss').Config} */
+
+const colors = {
+  // ...defaultColors,
+  ...{
+    primary: "#98C741",
+    secondary: "#4F9072",
+  }
+}
+
 export default {
   content: [
     "./components/**/*.{js,vue,ts}",
@@ -9,11 +18,16 @@ export default {
     "./error.vue",
   ],
   theme: {
-    colors: {
-      primary: "#98C741",
-      secondary: "#4F9072",
+    extend: {
+      colors: colors,
+      screens: {
+        ...{
+          'msm': "320px",
+          'mmd': "375px",
+          'mlg': "420px",
+        }
+      }
     },
-    extend: {},
   },
   plugins: [],
 }
