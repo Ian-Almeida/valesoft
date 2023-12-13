@@ -65,11 +65,11 @@ const closeModal = () => {
 <style scoped>
 
 .modal {
-    @apply z-10 md:top-20 fixed left-0 top-0 w-full h-full overflow-auto bg-black/40;
+    @apply z-10 md:top-20 fixed left-0 top-0 w-full h-full overflow-auto bg-black/40 ;
 }
 
 .modal-content {
-    @apply m-auto bg-white relative outline-0 shadow-lg rounded-lg text-black space-y-4 max-w-5xl;
+    @apply m-auto bg-white relative outline-0 shadow-lg rounded-lg text-black space-y-4 max-w-[280px] sm:max-w-sm;
 }
 
 .modal-actions {

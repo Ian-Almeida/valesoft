@@ -1,31 +1,42 @@
 <template>
-  <Modal v-model="modalOpen">
+  <Modal v-model="modalInfo.open">
     <template #title>
-      <div class="p-2">
-        <p class=" flex gap-1 text-black justify-center text-[8px] md:text-base">
-          <img class="md:w-7 md:h-7" src="assets/light_bulb.svg">
-          O que fazemos?
-        </p>
-        <div class="text-black font-black text-xl md:text-6xl lg:text-7xl text-center mt-2">Controle e Expedição</div>
+      <div class="p-2 flex items-center justify-center">
+        <div id="ball1" class="w-12 h-12 md:-top-8 rounded-full shadow-md bg-white">
+          <img v-if="showBall1" class="relative w-6 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2"
+            :src="modalInfo.icon">
+        </div>
       </div>
 
     </template>
 
     <template #default>
-      <div class="grid grid-cols-3 gap-4 p-2 md:gap-10 md:p-12">
-        <div class="col-span-2">
-          <div class="text-justify text-[5px] mmd:text-[8px] mlg:text-[9px] md:text-sm text-black mt-4 ">
-            Converse braveheart beepers bill gates generation Y trl. Macaulay culkin yin yang baywatch slacker. Spiked
-            hair boy meets world hey arnold nike, animated gifs vcr wallet chains moby nylon windbreaker. Men in black
-            super mario world michael jordan bubble tape, scrunchies light up sneakers vanilla ice buddy list.
-            Personalized mixtapes t-shirts baby got back free willy.
-          </div>
-        </div>
+      <div class="p-10">
+        <ul class="text-xs sm:text-base lg:text-xl flex flex-col gap-2 modal_ul text-justify">
+          <li v-for="val in modalInfo.content">{{ val }}</li>
+        </ul>
 
-        <div class="col-span-1 flex w-full h-full items-center justify-end">
-          <img src="assets/img3.png" alt="" class="max-w-[280px] md:max-w-xs w-full" />
+        <div class="flex w-full h-fit justify-center">
+          <a href="#contato">
+            <button @click="modalInfo.open = false"
+              class="w-fit bg-primary rounded flex text-[11px] md:text-sm p-1 px-2 gap-1 mt-6  items-center justify-center text-white">
+              <svg class="w-3 h-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+              </svg>
+              <div>
+                Entre em contato
+              </div>
+            </button>
+          </a>
         </div>
       </div>
+      
+        
+        
+        
+        <!-- <div v-html="modalInfo.content" class="text-justify text-[5px] mmd:text-[8px] mlg:text-[9px] md:text-sm text-black mt-4"></div> -->
     </template>
   </Modal>
 
@@ -44,7 +55,6 @@
     :class="`w-full h-fit relative z-0 flex flex-col items-center justify-center md:px-20 lg:px-32 2xl:px-56 md:pt-20 overflow-x-hidden
       before:top-[150px] before:w-full before:h-[1560px] before:-z-10 max-w-[2000px]
     `"
-    
     >
 
     <!-- Nós somos -->
@@ -113,19 +123,19 @@
 
         <!-- Mobile -->
         <div class="flex lg:hidden gap-10 2xl:gap-6 mt-10 md:mt-20">
-          <div id="ball1" class="w-8 h-8 md:w-12 md:h-12 md:-top-8 rounded-full shadow-md animate-bounce bg-white">
+          <div id="ball1" @click="openModal(1)" class="w-8 h-8 md:w-12 md:h-12 md:-top-8 rounded-full shadow-md animate-bounce bg-white">
             <img v-if="showBall1" class="relative w-4 md:w-6 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2"
-              src="assets/programmingarrows.svg">
+              :src="'/programmingarrows.svg'">
           </div>
 
           <div v-if="showBall2" id="ball2" class="w-8 h-8 md:w-12 md:h-12 md:-top-8 rounded-full shadow-md animate-bounce bg-white">
-            <img class="relative w-4 md:w-6 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2"
-              src="assets/codecircle.svg">
+            <img @click="openModal(2)" class="relative w-4 md:w-6 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2"
+              :src="'/codecircle.svg'">
           </div>
 
           <div v-if="showBall3" id="ball3" class="w-8 h-8 md:w-12 md:h-12 md:-top-8 rounded-full shadow-md animate-bounce bg-white">
-            <img class="relative w-4 md:w-6 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2"
-              src="assets/candle.svg">
+            <img @click="openModal(3)" class="relative w-4 md:w-6 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2"
+              :src="'/candle.svg'">
           </div>
 
         </div>
@@ -138,12 +148,12 @@
             <div class="leaf-top-right w-9 h-9 mlg:w-11 mlg:h-11 md:w-20 md:h-20 2xl:w-36 2xl:h-36 bg-primary"></div>
           </div>
 
-          <div @click="modalOpen = true"
+          <div
             class="relative w-20 h-fit md:w-36 lg:w-56 2xl:w-80  rounded-2xl bg-primary mt-4 shadow-md p-8">
             <div
               class="absolute w-8 h-8 lg:w-16 lg:h-16 2xl:w-24 2xl:h-24 md:-top-8 2xl:-top-14 rounded-full bg-white left-1/2 -translate-x-1/2 -top-4  shadow-md">
               <img class="relative w-4 lg:w-10 2xl:w-14 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2"
-                src="assets/programmingarrows.svg">
+                src="/programmingarrows.svg">
             </div>
             <ul
               class="text-white font-light text-[5px] md:text-xs lg:text-sm 2xl:text-xl p-3 pt-4 md:pt-8 w-full flex flex-col md:gap-2">
@@ -159,7 +169,7 @@
             <div
               class="absolute w-8 h-8 lg:w-16 lg:h-16 2xl:w-24 2xl:h-24 md:-top-8 2xl:-top-14 rounded-full bg-white left-1/2 -translate-x-1/2 -top-4 shadow-md">
               <img class="relative w-4 lg:w-10 2xl:w-14 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2"
-                src="assets/codecircle.svg">
+                src="/codecircle.svg">
             </div>
             <ul
               class="text-white font-light text-[4pt] md:text-xs lg:text-sm 2xl:text-xl p-5 pt-6 md:pt-10 w-full flex flex-col md:gap-2">
@@ -176,7 +186,7 @@
             class="relative w-20 md:w-36 lg:w-56 2xl:w-80 rounded-2xl bg-primary mt-4 shadow-md h-[178px] lg:h-[560px] 2xl:h-[600px] p-8">
             <div
               class="absolute w-8 h-8 lg:w-16 lg:h-16 2xl:w-24 2xl:h-24 md:-top-8 2xl:-top-14 rounded-full bg-white left-1/2 -translate-x-1/2 -top-4 shadow-md">
-              <img class="relative w-4 lg:w-10 2xl:w-14 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2" src="assets/candle.svg">
+              <img class="relative w-4 lg:w-10 2xl:w-14 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2" src="/candle.svg">
             </div>
             <ul
               class="text-white font-light text-[5px] md:text-xs lg:text-sm 2xl:text-xl p-3 pt-4 md:pt-8 w-full flex flex-col md:gap-2">
@@ -197,13 +207,13 @@
     </div>
 
     <!-- Mercado de Atuação -->
-    <div class="relative w-full px-8 msm:px-14 mt-12 flex flex-col gap-2 py-10 ">
+    <div class="relative w-full px-8 msm:px-14 mt-12 flex flex-col gap-2 py-10">
       <div class="
                 absolute rounded-bl-[1.5rem] lg:rounded-bl-[60px]
-                w-16 h-16 mmd:w-20 mmd:h-20 lg:w-44 lg:h-44 bg-white -right-10 top-28 md:-mx-20 lg:-mx-32 2xl:-mx-56"></div>
+                w-16 mmd:w-20 h-full bg-white  -right-10  md:-mx-20 lg:-mx-32 2xl:-mx-56"></div>
       <div class="absolute 
                 rounded-tr-[1.5rem] lg:rounded-tr-[60px]
-                w-16 h-16 mmd:w-20 mmd:h-20 lg:w-44 lg:h-44 bg-primary bottom-0 -left-10 md:-mx-20 lg:-mx-32 2xl:-mx-56"></div>
+                w-16 mmd:w-20 h-full bg-primary -left-10 md:-mx-20 lg:-mx-32 2xl:-mx-56"></div>
 
       <div class="self-center max-w-[270px] md:max-w-[540px] lg:max-w-3xl">
         <div class="text-primary font-bold text-xl md:text-4xl ">Mercado de Atuação</div>
@@ -456,7 +466,11 @@
   
 <script setup lang="ts">
 const route = useRoute();
-const modalOpen = ref(false);
+const modalInfo = ref({
+  open: false,
+  icon: '',
+  content: [] as Array<string>,
+})
 const newContact = ref({
   name: '',
   number: '',
@@ -479,6 +493,44 @@ const startAnimation = () => {
   }, 300);
 }
 
+const openModal = (num: number) => {
+  modalInfo.value.open = true;
+  
+  if (num === 1) {
+    modalInfo.value.icon = "/programmingarrows.svg";
+    modalInfo.value.content = [
+      'Consultoria Especializada para projetos de automação com RFID',
+      'Mapeamento e dimensionamento de escopo de tecnologia',
+      'Implantação de Projetos',
+      'POC – Provas de Conceito da tecnologia e índice de aderência',
+      'MVP – Validação da tecnologia utilizando um Produto Mínimo Viável'
+    ];
+    return
+  }
+
+  if (num === 2) {
+    modalInfo.value.icon = "/codecircle.svg";
+    modalInfo.value.content = [
+      'V.Log – Software para automação de leitura em processos logísticos (Matéria Prime e Produto Acabado)',
+      'V.Prod – Software para automação para rastreabilidade de lotes de MP, Apontamento de Produção, Movimentação de materiais entres depósitos',
+      'V.Station – Software autônomo sem necessidade de integração para conferência de materiais e packings de terceiros',
+    ];
+    return
+  }
+
+  if (num === 3) {
+    modalInfo.value.icon = "/candle.svg";
+    modalInfo.value.content = [
+      'Coletores de dados RFID',
+      'Estações de conferência',
+      'Impressoras',
+      'Portais',
+      'Antenas, Cabos e Suportes'
+    ];
+    return
+  }
+}
+
 onMounted(() => {
   startAnimation();
 })
@@ -490,6 +542,18 @@ li::before {
    content: "•";
    color: white;
    font-size: 8px;
+   display: inline-block;
+   padding: 0;
+   width: fit-content;
+   height: fit-content;
+   margin-right: 4px;
+   scale: 100%;
+}
+
+.modal_ul li::before {
+  content: "•";
+   color: black;
+   font-size: 12pt;
    display: inline-block;
    padding: 0;
    width: fit-content;
