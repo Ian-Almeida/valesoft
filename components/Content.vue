@@ -42,12 +42,7 @@
   <div
     id="main-content"
     :class="`w-full h-fit relative z-0 flex flex-col items-center justify-center md:px-20 lg:px-32 2xl:px-56 md:pt-20 overflow-x-hidden
-      before:top-[150px] before:w-full before:h-[1560px] before:-z-10
-      msm:before:top-[0px] msm:before:h-[1800px]
-
-      md:before:top-[450px] md:before:h-[2000px]
-      lg:before:top-[800px] lg:before:h-[2100px]
-      2xl:before:top-[800px] 2xl:before:h-[2150px]
+      before:top-[150px] before:w-full before:h-[1560px] before:-z-10 max-w-[2000px]
     `"
     
     >
@@ -57,11 +52,7 @@
       <div class="w-40 mmd:w-56 md:w-full md:max-w-md flex flex-col">
         <div class="text-primary font-black text-2xl mmd:text-3xl md:text-6xl lg:text-7xl">Nós somos a Valesoft</div>
         <div class="text-[6px] mmd:w-44 md:text-[12px] md:w-full text-justify mt-2 font-light">
-          Somos motivamos pelas oportunidades de levar as melhores soluções em rastreabilidade através da coleta de dados
-          de
-          processos para a indústria e logística, utilizando tecnologias como <strong>RFID</strong>, buscando sempre a
-          compreensão da realidade e
-          particularidades de cada operação.
+          Uma empresa de tecnologia que desenvolve soluções para a evolução industrial através da digitalização e rastreabilidade de processos no chão fábrica. Nosso propósito é entregar uma jornada completa de coleta de dados e entrega de informações gerenciais e estratégicas para elevar sua capacidade operacional.
         </div>
 
         <a href="#contato">
@@ -212,7 +203,7 @@
                 w-16 h-16 mmd:w-20 mmd:h-20 lg:w-44 lg:h-44 bg-white -right-10 top-28 md:-mx-20 lg:-mx-32 2xl:-mx-56"></div>
       <div class="absolute 
                 rounded-tr-[1.5rem] lg:rounded-tr-[60px]
-                w-16 h-16 mmd:w-20 mmd:h-20 lg:w-44 lg:h-44 bg-primary bottom-28 -left-10 md:-mx-20 lg:-mx-32 2xl:-mx-56"></div>
+                w-16 h-16 mmd:w-20 mmd:h-20 lg:w-44 lg:h-44 bg-primary bottom-0 -left-10 md:-mx-20 lg:-mx-32 2xl:-mx-56"></div>
 
       <div class="self-center max-w-[270px] md:max-w-[540px] lg:max-w-3xl">
         <div class="text-primary font-bold text-xl md:text-4xl ">Mercado de Atuação</div>
@@ -513,6 +504,7 @@ li::before {
   /* background: red;   */
   background: url('/bg.svg')  
                 no-repeat center center/cover;
+                max-width: 2000px;
   position: absolute;
 }
 
@@ -524,25 +516,19 @@ li::before {
 
 @media (min-width: 330px) {
   #main-content::before {
-        height: 1700px;
-    }
-}
-
-@media (min-width: 330px) {
-  #main-content::before {
-        height: 1700px;
+        height: 1550px;
     }
 }
 
 @media (min-width: 350px) {
   #main-content::before {
-        height: 1600px;
+        height: 1450px;
     }
 }
 
 @media (min-width: 388px) {
   #main-content::before {
-        height: 1550px;
+        height: 1350px;
     }
 }
 
