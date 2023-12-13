@@ -42,8 +42,10 @@
   <div
     id="main-content"
     :class="`w-full h-fit relative z-0 flex flex-col items-center justify-center md:px-20 lg:px-32 2xl:px-56 md:pt-20 overflow-x-hidden
-      before:top-[420px] before:w-full before:h-[1200px] before:-z-10
-      md:before:top-[800px] md:before:h-[1900px]
+      before:top-[150px] before:w-full before:h-[1560px] before:-z-10
+      msm:before:top-[0px] msm:before:h-[1800px]
+
+      md:before:top-[450px] md:before:h-[2000px]
       lg:before:top-[800px] lg:before:h-[2100px]
       2xl:before:top-[800px] 2xl:before:h-[2150px]
     `"
@@ -112,7 +114,7 @@
     <div class="relative w-full flex flex-col items-center justify-center">
 
       <div class="relative flex items-center justify-center flex-col gap-2">
-        <p class="text-[8px] md:text-2xl flex gap-1 text-black font-light">
+        <p class="text-[8px] md:text-2xl flex gap-1 text-white font-light">
           <img class="md:w-7 md:h-7" src="assets/light_bulb.svg">
           O que fazemos?
         </p>
@@ -120,17 +122,17 @@
 
         <!-- Mobile -->
         <div class="flex lg:hidden gap-10 2xl:gap-6 mt-10 md:mt-20">
-          <div id="ball1" class="w-8 h-8 md:w-12 md:h-12 md:-top-8 rounded-full shadow-md animate-bounce">
+          <div id="ball1" class="w-8 h-8 md:w-12 md:h-12 md:-top-8 rounded-full shadow-md animate-bounce bg-white">
             <img v-if="showBall1" class="relative w-4 md:w-6 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2"
               src="assets/programmingarrows.svg">
           </div>
 
-          <div v-if="showBall2" id="ball2" class="w-8 h-8 md:w-12 md:h-12 md:-top-8 rounded-full shadow-md animate-bounce">
+          <div v-if="showBall2" id="ball2" class="w-8 h-8 md:w-12 md:h-12 md:-top-8 rounded-full shadow-md animate-bounce bg-white">
             <img class="relative w-4 md:w-6 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2"
               src="assets/codecircle.svg">
           </div>
 
-          <div v-if="showBall2" id="ball3" class="w-8 h-8 md:w-12 md:h-12 md:-top-8 rounded-full shadow-md animate-bounce">
+          <div v-if="showBall3" id="ball3" class="w-8 h-8 md:w-12 md:h-12 md:-top-8 rounded-full shadow-md animate-bounce bg-white">
             <img class="relative w-4 md:w-6 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2"
               src="assets/candle.svg">
           </div>
@@ -214,13 +216,29 @@
 
       <div class="self-center max-w-[270px] md:max-w-[540px] lg:max-w-3xl">
         <div class="text-primary font-bold text-xl md:text-4xl ">Mercado de Atuação</div>
-        <div class="text-justify text-[10px] md:text-xl text-black mt-6 font-light">
+        <div class="text-justify text-[10px] md:text-xl text-white mt-6 font-light">
           A Valesoft é uma empresa dedicada a construir soluções para automação de coleta de dados para processos
           industriais e
           logístico, focando os desafios dos segmentos Metalmecânico, Plástico e Celulose.
 
-          <br>
-          <br>
+          <div>
+            <br>
+            <br>
+          </div>
+          <div class="hidden lg:block">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+          </div>
+
+          
           Através do foco em segmentos chaves conseguimos evoluir cada vez mais nossas soluções, elevando sempre o índice
           de
           aderência dos nossos produtos, e como resultado conseguimos realizar entregas mais efetivas e em menor tempo,
@@ -235,14 +253,14 @@
     <!-- Sobre nós Mobile-->
     <div class="w-full h-fit px-8 msm:px-14 mt-6 lg:hidden flex flex-col justify-center items-center">
 
-      <div class="flex text-[7px] md:text-base text-black gap-1 w-full max-w-[270px] md:max-w-[540px]">
+      <div class="flex text-[7px] md:text-base text-white gap-1 w-full max-w-[270px] md:max-w-[540px]">
         <img class="md:w-4 md:h-4" src="assets/people.svg">
         Sobre nós
       </div>
 
-      <div class="font-black text-xl md:text-6xl text-black w-full max-w-[270px]  md:max-w-[540px]">Nativos em RFID</div>
+      <div class="font-black text-xl md:text-6xl text-white w-full max-w-[270px]  md:max-w-[540px]">Nativos em RFID</div>
 
-      <div class="text-justify text-[10px] md:text-xl text-black mt-4 font-light max-w-[270px] md:max-w-[540px]">
+      <div class="text-justify text-[10px] md:text-xl text-white mt-4 font-light max-w-[270px] md:max-w-[540px]">
         A Valesoft é uma empresa pertencente ao grupo <strong>Desafio Agora</strong>, que por mais de 7 anos atua e domina
         o mercado Latino
         Americano com fornecimento de tecnologia RFID no segmento de cronometragem esportiva.
@@ -325,18 +343,18 @@
     <!-- Sobre nós Desktop-->
     <div class="container mx-auto p-4 hidden lg:block">
 
-      <div class="flex text-[7px] md:text-base font-light text-black gap-1 w-full max-w-3xl">
+      <div class="flex text-[7px] md:text-base font-light text-white gap-1 w-full max-w-3xl">
         <img class="md:w-4 md:h-4" src="assets/people.svg">
         Sobre nós
       </div>
 
-      <div class="font-black text-xl text-black w-full md:text-6xl lg:text-7xl break-words max-w-3xl">Nativos em RFID</div>
+      <div class="font-black text-xl text-white w-full md:text-6xl lg:text-7xl break-words max-w-3xl">Nativos em RFID</div>
 
       <div class="grid grid-cols-2 gap-32">
 
         <div class="col-span-1 mt-8">
           
-          <div class="text-justify text-[10px] md:text-xl text-black font-light max-w-md">
+          <div class="text-justify text-[10px] md:text-xl text-white font-light max-w-md">
             A Valesoft é uma empresa pertencente ao grupo <strong>Desafio Agora</strong>, que por mais de 7 anos atua e
             domina o mercado Latino
             Americano com fornecimento de tecnologia RFID no segmento de cronometragem esportiva.
@@ -497,7 +515,7 @@ li::before {
   content: "";
   z-index: -10;
   /* background: red;   */
-  background: url('/bg.png')  
+  background: url('/bg.svg')  
                 no-repeat center center/cover;
   position: absolute;
 }
@@ -508,56 +526,90 @@ li::before {
 }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 330px) {
   #main-content::before {
-        height: 2300px;
+        height: 1700px;
     }
 }
 
-@media (min-width: 1090px) {
+@media (min-width: 330px) {
   #main-content::before {
-        height: 2200px;
+        height: 1700px;
+    }
+}
+
+@media (min-width: 350px) {
+  #main-content::before {
+        height: 1600px;
+    }
+}
+
+@media (min-width: 388px) {
+  #main-content::before {
+        height: 1550px;
+    }
+}
+
+@media (min-width: 768px) {
+  #main-content::before {
+        top: 200px;
+        height: 2450px;
+    }
+}
+
+@media (min-width: 800px) {
+  #main-content::before {
+        top: 200px;
+        height: 2350px;
+    }
+}
+
+@media (min-width: 1024px) {
+  #main-content::before {
+        top: 180px;
+        height: 3250px;
+    }
+}
+
+@media (min-width: 1068px) {
+  #main-content::before {
+        top: 180px;
+        height: 3150px;
+    }
+}
+
+@media (min-width: 1100px) {
+  #main-content::before {
+        top: 200px;
+        height: 3100px;
     }
 }
 
 @media (min-width: 1200px) {
   #main-content::before {
-        height: 2100px;
+        top: 200px;
+        height: 3050px;
     }
 }
 
-/* @media (min-width: 1180px) {
+@media (min-width: 1260px) {
   #main-content::before {
-        height: 1900px;
-        top: 790px;
+        top: 200px;
+        height: 3000px;
     }
 }
 
 @media (min-width: 1536px) {
   #main-content::before {
-        height: 2000px;
-        top: 800px;
+        top: 200px;
+        height: 3060px;
     }
 }
 
-@media (min-width: 1650px) {
+/* @media (min-width: 1680px) {
   #main-content::before {
-        height: 2200px;
-        top: 750px;
-    }
-}
-
-@media (min-width: 1850px) {
-  #main-content::before {
-        height: 2400px;
-        top: 750px;
-    }
-}
-
-@media (min-width: 1900px) {
-  #main-content::before {
-        height: 2400px;
-        top: 750px;
+        top: 200px;
+        height: 3060px;
     }
 } */
 </style>
