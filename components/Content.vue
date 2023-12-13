@@ -209,10 +209,10 @@
     <div class="relative w-full px-8 msm:px-14 mt-12 flex flex-col gap-2 py-10 ">
       <div class="
                 absolute rounded-bl-[1.5rem] lg:rounded-bl-[60px]
-                w-16 h-16 mmd:w-20 mmd:h-20 lg:w-44 lg:h-44 bg-red-500 -right-10 md:-mx-20 lg:-mx-32 2xl:-mx-56"></div>
+                w-16 h-16 mmd:w-20 mmd:h-20 lg:w-44 lg:h-44 bg-white -right-10 top-28 md:-mx-20 lg:-mx-32 2xl:-mx-56"></div>
       <div class="absolute 
                 rounded-tr-[1.5rem] lg:rounded-tr-[60px]
-                w-16 h-16 mmd:w-20 mmd:h-20 lg:w-44 lg:h-44 bg-primary bottom-0 -left-10 md:-mx-20 lg:-mx-32 2xl:-mx-56"></div>
+                w-16 h-16 mmd:w-20 mmd:h-20 lg:w-44 lg:h-44 bg-primary bottom-28 -left-10 md:-mx-20 lg:-mx-32 2xl:-mx-56"></div>
 
       <div class="self-center max-w-[270px] md:max-w-[540px] lg:max-w-3xl">
         <div class="text-primary font-bold text-xl md:text-4xl ">Mercado de Atuação</div>
@@ -226,10 +226,6 @@
             <br>
           </div>
           <div class="hidden lg:block">
-            <br>
-            <br>
-            <br>
-            <br>
             <br>
             <br>
             <br>
@@ -375,7 +371,7 @@
         <div class="col-span-1 flex items-center justify-center max-w-md">
           <div class="relative">
             <div class=" w-28 h-28 bg-secondary absolute left-0 -z-10 rounded-b-[3rem] rounded-tr-[3rem]"></div>
-            <img class="max-w-xs w-full" src="assets/img3.png">
+            <img class="max-w-xs w-full" src="assets/img2.png">
             <div
               class=" w-32 h-32 bg-secondary absolute z-10 right-0 -bottom-6 rounded-b-[3rem] rounded-tl-[3rem]">
             </div>
@@ -387,7 +383,7 @@
         </div>
 
         <div class="col-span-1">
-          <div class="text-justify text-[10px] md:text-xl text-black mt-4 max-w-md font-light">
+          <div class="text-justify text-[10px] md:text-xl text-black mt-4 lg:mt-36 2xl:mt-44 max-w-md font-light">
             A <strong>Valesoft</strong> possui um programa amplo de parcerias de negócios, modelados para melhor atender
             cada extensão de nossa
             atuação no mercado.
@@ -566,50 +562,43 @@ li::before {
 
 @media (min-width: 1024px) {
   #main-content::before {
-        top: 180px;
+        top: 110px;
         height: 3250px;
     }
 }
 
 @media (min-width: 1068px) {
   #main-content::before {
-        top: 180px;
+        top: 110px;
         height: 3150px;
     }
 }
 
 @media (min-width: 1100px) {
   #main-content::before {
-        top: 200px;
-        height: 3100px;
+        top: 180px;
+        height: 3000px;
     }
 }
 
 @media (min-width: 1200px) {
   #main-content::before {
-        top: 200px;
-        height: 3050px;
+        top: 220px;
+        height: 2950px;
     }
 }
 
 @media (min-width: 1260px) {
   #main-content::before {
-        top: 200px;
-        height: 3000px;
+        top: 250px;
+        height: 2900px;
     }
 }
 
 @media (min-width: 1536px) {
   #main-content::before {
-        top: 200px;
-        height: 3060px;
+        top: 240px;
+        height: 3000px;
     }
 }
-
-/* @media (min-width: 1680px) {
-  #main-content::before {
-        top: 200px;
-        height: 3060px;
-    }
-} */
 </style>
