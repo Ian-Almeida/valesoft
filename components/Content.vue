@@ -32,11 +32,6 @@
           </a>
         </div>
       </div>
-      
-        
-        
-        
-        <!-- <div v-html="modalInfo.content" class="text-justify text-[5px] mmd:text-[8px] mlg:text-[9px] md:text-sm text-black mt-4"></div> -->
     </template>
   </Modal>
 
@@ -94,22 +89,16 @@
     </div>
 
     <!-- Parceiros -->
-    <p class="text-[5px] font-light md:text-sm text-center my-2 mt-6 px-6 md:mt-24 lg:mt-40">Parceiros | Canais</p>
-    <div class="flex gap-2 md:gap-4 mb-4 px-6 flex-wrap justify-center text-white">
-      <button class="w-fit h-fit p-2 rounded-lg bg-secondary text-center text-[5px] md:text-sm ">Logo
-        parceira</button>
-      <button class="w-fit h-fit p-2 rounded-lg bg-secondary text-center text-[5px] md:text-sm ">Logo
-        parceira</button>
-      <button class="w-fit h-fit p-2 rounded-lg bg-secondary text-center text-[5px] md:text-sm ">Logo
-        parceira</button>
-      <button class="w-fit h-fit p-2 rounded-lg bg-secondary text-center text-[5px] md:text-sm ">Logo
-        parceira</button>
-      <button class="w-fit h-fit p-2 rounded-lg bg-secondary text-center text-[5px] md:text-sm ">Logo
-        parceira</button>
-      <button class="w-fit h-fit p-2 rounded-lg bg-secondary text-center text-[5px] md:text-sm ">Logo
-        parceira</button>
+    <p class="text-[5px] font-light md:text-sm text-center my-2 mt-14 px-6 md:mt-24 lg:mt-14">Parceiros | Canais</p>
+    <div class="flex gap-2 md:gap-4 2xl:gap-8 mb-4 px-6 flex-wrap justify-center text-white">
+      <img class="w-20 h-9" src="/AD_LOGO.png" />
+      <img class="w-20 h-9" src="/CHAINWAY_LOGO.png" />
+      <img class="w-24 h-9" src="/CINNCO_LOGO.png" />
+      <img class="w-24 h-9" src="/PRIME_LOGO.png" />
+      <img class="w-20 h-9" src="/SATO_LOGO.png" />
+      <img class="w-20 h-9" src="/ZEBRA_LOGO.png" />
     </div>
-    <section id="servicos" class="py-20"></section>
+    <section id="servicos" class="py-14"></section>
 
     <!-- Nossas soluções -->
     <div class="relative w-full flex flex-col items-center justify-center">
@@ -433,23 +422,23 @@
           </div>
         </div>
 
-        <div class="w-3/5 h-full flex flex-col p-4 gap-4">
-          <label>
+        <div class="w-3/5 h-full flex flex-col p-4 gap-4 items-center justify-center">
+          <label class="w-full">
             <p class="text-[5px] sm:text-[9px] md:text-base text-white font-semibold">Número</p>
-            <input class="w-1/2 h-4 rounded-xl  p-1 text-[6px] sm:text-[10px]
-                  md:w-4/5 md:h-10 md:rounded-full md:text-base
+            <input class="w-1/2 h-4 rounded md:rounded-xl  p-1 text-[6px] sm:text-[10px]
+                  md:w-4/5 md:h-10 md:text-base focus:outline-none
                   " v-model="newContact.number" v-maska data-maska="+55 (##) # ####-####" />
         </label>
-        <label>
+        <label class="w-full">
           <p class="text-[5px] sm:text-[9px] md:text-base text-white font-semibold">Seu e-mail</p>
-          <input class="w-full h-4 rounded-xl  p-1 text-[6px] sm:text-[10px]
-                  md:h-10 md:rounded-full md:text-base
-                  " v-model="newContact.email" />
+          <input class="w-full h-4 rounded md:rounded-xl  p-1 text-[6px] sm:text-[10px]
+                  md:h-10 md:text-base focus:outline-none
+                  " v-model="newContact.email" type="email"/>
         </label>
-        <label>
+        <label class="w-full">
           <p class="text-[5px] sm:text-[9px] md:text-base text-white font-semibold mb-1">Sua mensagem</p>
-          <textarea class="w-full h-full rounded-xl p-1 text-[6px] sm:text-[10px]
-                  md:rounded-2xl md:text-base
+          <textarea class="w-full h-full rounded md:rounded-xl p-1 text-[6px] sm:text-[10px]
+                   md:text-base focus:outline-none
                   " v-model="newContact.message" />
         </label>
       </div>
@@ -578,6 +567,19 @@ li::before {
 }
 }
 
+@media (min-width: 280px) {
+  #main-content::before {
+        height: 1700px;
+    }
+}
+
+@media (min-width: 20px) {
+  #main-content::before {
+        height: 1600px;
+    }
+}
+
+
 @media (min-width: 330px) {
   #main-content::before {
         height: 1550px;
@@ -592,7 +594,8 @@ li::before {
 
 @media (min-width: 388px) {
   #main-content::before {
-        height: 1350px;
+    top: 100px;
+        height: 1450px;
     }
 }
 
@@ -603,51 +606,58 @@ li::before {
     }
 }
 
-@media (min-width: 800px) {
+@media (min-width: 810px) {
   #main-content::before {
-        top: 200px;
-        height: 2350px;
+        top: 140px;
+        height: 2450px;
+    }
+}
+
+@media (min-width: 830px) {
+  #main-content::before {
+        top: 140px;
+        height: 2400px;
     }
 }
 
 @media (min-width: 1024px) {
   #main-content::before {
-        top: 110px;
-        height: 3250px;
+        top: 0px;
+        height: 3100px;
     }
 }
 
 @media (min-width: 1068px) {
   #main-content::before {
-        top: 110px;
-        height: 3150px;
+        top: 0px;
+        height: 3100px;
     }
 }
 
 @media (min-width: 1100px) {
   #main-content::before {
-        top: 180px;
+        top: 28px;
         height: 3000px;
     }
 }
 
 @media (min-width: 1200px) {
   #main-content::before {
-        top: 220px;
+        top: 68px;
         height: 2950px;
     }
 }
 
 @media (min-width: 1260px) {
   #main-content::before {
-        top: 250px;
+        top: 98px;
         height: 2900px;
     }
 }
 
 @media (min-width: 1536px) {
   #main-content::before {
-        top: 240px;
+        top: 88px;
         height: 3000px;
     }
 }
