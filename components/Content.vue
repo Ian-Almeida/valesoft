@@ -275,21 +275,7 @@
             <img class="w-full max-w-[135px] md:max-w-[220px]" src="assets/img2.png">
           </div>
         </div>
-
-        <!-- <div class="relative w-fit h-fit z-0">
-          <div class="leaf-top-left w-8 h-8 bg-secondary absolute left-2 -z-10"></div>
-          <img class="relative w-10/12 mmd:w-11/12 left-1/2 -translate-x-1/2" src="assets/img2.png">
-        </div> -->
-
-        <!-- <div class="z-0 relative w-fit">
-          <div class="absolute bg-primary rounded-full w-5 h-5 flex items-center justify-center shadow-lg left-4">
-            <img class="w-3 h-3" src="assets/medalstar.svg">
-          </div>
-          <img class="relative w-10/12 mmd:w-11/12 left-1/2 -translate-x-1/2 -z-10" src="assets/img3.png">
-          <div
-            class="leaf-top-right w-6 h-6 mmd:w-9 mmd:h-9 mmd:-bottom-3 bg-secondary absolute right-2 -bottom-1 msm:right-4 mmd:right-2  ">
-          </div>
-        </div> -->
+        
         <div class="relative w-40 md:w-full h-fit z-0 flex justify-end">
           <div class="relative">
             <div class="absolute bg-primary rounded-full w-5 h-5 md:w-11 md:h-11 flex items-center justify-center shadow-lg left-2 top-2">
@@ -354,10 +340,6 @@
           </div>
         </div>
 
-        <!-- <div class="">
-          <img src="assets/img3.png" alt="" class="max-w-xs w-full" />
-        </div> -->
-
         <div class="col-span-1 flex items-center justify-center max-w-md">
           <div class="relative">
             <div class=" w-28 h-28 bg-secondary absolute left-0 -z-10 rounded-b-[3rem] rounded-tr-[3rem]"></div>
@@ -368,11 +350,11 @@
           </div>
         </div>
 
-        <div class="col-span-1 flex items-center justify-center max-w-md">
+        <div class="col-span-1 flex items-center justify-center max-w-md lg:mt-36 2xl:mt-44">
           <img src="assets/img3.png" alt="" class="max-w-xs w-full" />
         </div>
 
-        <div class="col-span-1">
+        <div class="col-span-1 flex items-center justify-center">
           <div class="text-justify text-[10px] md:text-xl text-black mt-4 lg:mt-36 2xl:mt-44 max-w-md font-light">
             A <strong>Valesoft</strong> possui um programa amplo de parcerias de negócios, modelados para melhor atender
             cada extensão de nossa
