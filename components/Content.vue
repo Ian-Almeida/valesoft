@@ -56,7 +56,7 @@
     <div class="flex gap-4 px-6 pt-6 md:p-0 items-center justify-around w-full mt-4 md:mt-14">
       <div class="w-40 mmd:w-56 md:w-full md:max-w-md flex flex-col">
         <div class="text-primary font-black text-2xl mmd:text-3xl md:text-6xl lg:text-7xl">Nós somos a Valesoft</div>
-        <div class="text-[6px] mmd:w-44 md:text-[12px] md:w-full text-justify mt-2 font-light">
+        <div class="text-[6px] mmd:w-44 md:text-[15px] md:w-full text-justify mt-2 font-light">
           Uma empresa de tecnologia que desenvolve soluções para a evolução industrial através da digitalização e rastreabilidade de processos no chão fábrica. Nosso propósito é entregar uma jornada completa de coleta de dados e entrega de informações gerenciais e estratégicas para elevar sua capacidade operacional.
         </div>
 
@@ -93,7 +93,7 @@
     <div class="flex gap-2 md:gap-4 2xl:gap-8 mb-4 px-6 flex-wrap justify-center text-white">
       <img class="w-20 h-9" src="/AD_LOGO.png" />
       <img class="w-20 h-9" src="/CHAINWAY_LOGO.png" />
-      <img class="w-24 h-9" src="/CINNCO_LOGO.png" />
+      <img class="w-36 h-9" src="/CINNCO_LOGO.png" />
       <img class="w-24 h-9" src="/PRIME_LOGO.png" />
       <img class="w-20 h-9" src="/SATO_LOGO.png" />
       <img class="w-20 h-9" src="/ZEBRA_LOGO.png" />
@@ -268,6 +268,7 @@
       </div>
 
       <div class="relative flex gap-4 mt-11 justify-around">
+        <div class="absolute bg-primary w-screen h-96 -z-10 -top-56"></div>
 
         <div class="relative w-40 md:w-full h-fit z-0 flex justify-end">
           <div class="relative">
@@ -324,8 +325,8 @@
 
       <div class="grid grid-cols-2 gap-32">
 
-        <div class="col-span-1 mt-8">
-          
+        <div class="relative col-span-1 mt-8">
+          <div class="absolute w-screen h-96 top-56 bg-primary -z-10 -left-36 2xl:-left-60"></div>
           <div class="text-justify text-[10px] md:text-xl text-white font-light max-w-md">
             A Valesoft é uma empresa pertencente ao grupo <strong>Desafio Agora</strong>, que por mais de 7 anos atua e
             domina o mercado Latino
@@ -583,49 +584,105 @@ li::before {
 
 @media (min-width: 768px) {
   #main-content::before {
-        top: 200px;
-        height: 2450px;
+        top: 380px;
+        height: 2250px;
+    }
+}
+
+@media (min-width: 800px) {
+  #main-content::before {
+        top: 380px;
+        height: 2200px;
     }
 }
 
 @media (min-width: 810px) {
   #main-content::before {
-        top: 140px;
-        height: 2450px;
+        top: 370px;
+        height: 2250px;
     }
 }
 
 @media (min-width: 830px) {
   #main-content::before {
-        top: 140px;
-        height: 2400px;
+        top: 380px;
+        height: 2200px;
+    }
+}
+
+@media (min-width: 855px) {
+  #main-content::before {
+        top: 380px;
+        height: 2150px;
+    }
+}
+
+@media (min-width: 865px) {
+  #main-content::before {
+        top: 320px;
+        height: 2150px;
+    }
+}
+
+@media (min-width: 894px) {
+  #main-content::before {
+        top: 300px;
+        height: 2150px;
+    }
+}
+
+@media (min-width: 898px) {
+  #main-content::before {
+        top: 250px;
+        height: 2150px;
+    }
+}
+
+@media (min-width: 960px) {
+  #main-content::before {
+        top: 280px;
+        height: 2150px;
+    }
+}
+
+@media (min-width: 990px) {
+  #main-content::before {
+        top: 300px;
+        height: 2150px;
     }
 }
 
 @media (min-width: 1024px) {
   #main-content::before {
-        top: 0px;
-        height: 3100px;
+        top: 110px;
+        height: 3000px;
     }
 }
 
 @media (min-width: 1068px) {
   #main-content::before {
-        top: 0px;
-        height: 3100px;
+        top:110px;
+        height: 3000px;
+    }
+}
+
+@media (min-width: 1085px) {
+  #main-content::before {
+        top:110px;
+        height: 2900px;
     }
 }
 
 @media (min-width: 1100px) {
   #main-content::before {
-        top: 28px;
-        height: 3000px;
+        top: 100px;
+        height: 2900px;
     }
 }
 
 @media (min-width: 1200px) {
   #main-content::before {
-        top: 68px;
+        top: 80px;
         height: 2950px;
     }
 }
@@ -639,8 +696,29 @@ li::before {
 
 @media (min-width: 1536px) {
   #main-content::before {
-        top: 88px;
+        top: 80px;
         height: 3000px;
+    }
+}
+
+@media (min-width: 1800px) {
+  #main-content::before {
+        top: 100px;
+        height: 3000px;
+    }
+}
+
+@media (min-width: 1900px) {
+  #main-content::before {
+        top: 250px;
+        height: 2700px;
+    }
+}
+
+@media (min-width: 1950px) {
+  #main-content::before {
+        top: 230px;
+        height: 2700px;
     }
 }
 </style>
