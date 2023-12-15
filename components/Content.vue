@@ -91,12 +91,12 @@
     <!-- Parceiros -->
     <p class="text-[5px] font-light md:text-sm text-center my-2 mt-14 px-6 md:mt-24 lg:mt-14">Parceiros | Canais</p>
     <div class="flex gap-2 md:gap-4 2xl:gap-8 mb-4 px-6 flex-wrap justify-center text-white">
-      <img class="w-20 h-9" src="/AD_LOGO.png" />
-      <img class="w-20 h-9" src="/CHAINWAY_LOGO.png" />
+      <img class="w-28 h-9" src="/CHAINWAY_LOGO.png" />
       <img class="w-36 h-9" src="/CINNCO_LOGO.png" />
-      <img class="w-24 h-9" src="/PRIME_LOGO.png" />
-      <img class="w-20 h-9" src="/SATO_LOGO.png" />
-      <img class="w-20 h-9" src="/ZEBRA_LOGO.png" />
+      <img class="w-28 h-9" src="/PRIME_LOGO.png" />
+      <img class="w-28 h-9" src="/SATO_LOGO.png" />
+      <img class="w-28 h-9" src="/ZEBRA_LOGO.png" />
+      <img class="w-28 h-9" src="/AD_LOGO.png" />
     </div>
     <section id="servicos" class="py-14"></section>
 
@@ -389,18 +389,18 @@
           <span class="text-center text-[5px] sm:text-[9px] md:text-base text-white font-semibold">Nossas redes</span>
           <div class="flex gap-4">
             <div class="w-5 h-5 sm:w-8 sm:h-8 md:w-12 md:h-12 rounded-full bg-white flex items-center justify-center">
-              <img class="w-2 h-2 md:w-6 md:h-6" src="assets/instagram.svg">
+              <a href="https://www.instagram.com/valesoft_rfid/" target="_blank"><img class="w-2 h-2 md:w-6 md:h-6" src="assets/instagram.svg"></a>
             </div>
             <div class="w-5 h-5 sm:w-8 sm:h-8 md:w-12 md:h-12 rounded-full bg-white flex items-center justify-center">
-              <img class="w-2 h-2 md:w-6 md:h-6" src="assets/youtube.svg">
+              <a><img class="w-2 h-2 md:w-6 md:h-6" src="assets/youtube.svg"></a>
             </div>
           </div>
           <div class="flex gap-4">
             <div class="w-5 h-5 sm:w-8 sm:h-8 md:w-12 md:h-12 rounded-full bg-white flex items-center justify-center">
-              <img class="w-2 h-2 md:w-6 md:h-6" src="assets/facebook.svg">
+              <a href="https://www.facebook.com/valesoftrfid" target="_blank"><img class="w-2 h-2 md:w-6 md:h-6" src="assets/facebook.svg"></a>
             </div>
             <div class="w-5 h-5 sm:w-8 sm:h-8 md:w-12 md:h-12 rounded-full bg-white flex items-center justify-center">
-              <img class="w-2 h-2 md:w-6 md:h-6" src="assets/linkedin.svg">
+              <a href="https://www.linkedin.com/company/83051513/admin/feed/posts/" target="_blank"><img class="w-2 h-2 md:w-6 md:h-6" src="assets/linkedin.svg"></a>
             </div>
           </div>
         </div>
@@ -552,21 +552,21 @@ li::before {
 
 @media (min-width: 280px) {
   #main-content::before {
-        top: 200px;
+        top: 300px;
         height: 1700px;
     }
 }
 
 @media (min-width: 285px) {
   #main-content::before {
-        top: 150px;
+        top: 300px;
         height: 1700px;
     }
 }
 
-@media (min-width: 300px) {
+@media (min-width: 299px) {
   #main-content::before {
-        top: 150px;
+        top: 250px;
         height: 1600px;
     }
 }
@@ -580,33 +580,35 @@ li::before {
 
 @media (min-width: 320px) {
   #main-content::before {
-        top: 200px;
+        top: 250px;
         height: 1600px;
     }
 }
 
 @media (min-width: 329px) {
   #main-content::before {
+    top: 220px;
         height: 1550px;
     }
 }
 
 @media (min-width: 345px) {
   #main-content::before {
+        top: 220px;
         height: 1450px;
     }
 }
 
 @media (min-width: 366px) {
   #main-content::before {
-        top:170px;
+        top:200px;
         height: 1450px;
     }
 }
 
 @media (min-width: 388px) {
   #main-content::before {
-    top: 100px;
+    top: 140px;
         height: 1450px;
     }
 }
@@ -655,28 +657,28 @@ li::before {
 
 @media (min-width: 894px) {
   #main-content::before {
-        top: 300px;
+        top: 350px;
         height: 2150px;
     }
 }
 
 @media (min-width: 898px) {
   #main-content::before {
-        top: 250px;
+        top: 310px;
         height: 2150px;
     }
 }
 
 @media (min-width: 960px) {
   #main-content::before {
-        top: 280px;
+        top: 330px;
         height: 2150px;
     }
 }
 
 @media (min-width: 990px) {
   #main-content::before {
-        top: 300px;
+        top: 340px;
         height: 2150px;
     }
 }
