@@ -5,9 +5,9 @@
         class="modal-content animate-top" 
         @click="(e) => e.stopPropagation()"
     >
-        <svg class="absolute w-4 h-4 mr-2 right-0 text-white hover:bg-gray-500/20 hover:cursor-pointer rounded-md p-1" @click="closeModal"  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+        <!-- <svg class="absolute w-4 h-4 mr-2 right-0 text-white hover:bg-gray-500/20 hover:cursor-pointer rounded-md p-1" @click="closeModal"  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-        </svg>
+        </svg> -->
         <div class="bg-secondary p-4 rounded-t-lg">
             <slot name="title"></slot>
         </div>
@@ -65,11 +65,11 @@ const closeModal = () => {
 <style scoped>
 
 .modal {
-    @apply z-10 md:top-20 fixed left-0 top-0 w-full h-full overflow-auto bg-black/40 ;
+    @apply z-10 md:top-20 fixed left-0 top-0 w-full h-full overflow-auto bg-black/40 pt-32;
 }
 
 .modal-content {
-    @apply m-auto bg-white relative outline-0 shadow-lg rounded-lg text-black space-y-4 max-w-[280px] sm:max-w-sm;
+    @apply m-auto bg-white relative outline-0 shadow-lg rounded-lg text-black space-y-4 max-w-[280px] sm:max-w-sm lg:max-w-lg;
 }
 
 .modal-actions {
