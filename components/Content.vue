@@ -283,7 +283,7 @@
       </div>
 
       <div class="relative flex gap-4 mt-11 justify-around">
-        <div class="absolute bg-primary w-screen h-[450px] -z-10 -top-[350px] md:-top-[700px] md:h-[850px]"></div>
+        <div id="sobrenos-bg-mobile" class="absolute bg-primary w-screen h-[450px] -z-10 -top-[350px] md:-top-[700px] md:h-[850px]"></div>
 
         <div class="relative w-40 md:w-full h-fit z-0 flex justify-end">
           <div class="relative">
@@ -314,7 +314,7 @@
         sua composição de solução.
       </div>
 
-      <div class="relative w-40 md:w-full h-fit z-0 flex justify-end py-4">
+      <div class="relative w-40 md:w-full h-fit z-0 flex justify-center py-4">
         <div class="relative">
           <div class="absolute bg-primary rounded-full w-5 h-5 md:w-11 md:h-11 flex items-center justify-center shadow-lg left-2 top-2">
             <img class="w-3 h-3 md:w-6 md:h-6" src="assets/medalstar.svg">
@@ -354,7 +354,7 @@
           </div>
         </div>
 
-        <div class="col-span-1 flex items-center justify-center max-w-md">
+        <div class="col-span-1 flex items-center justify-end max-w-md">
           <div class="relative">
             <div class=" w-28 h-28 bg-secondary absolute left-0 -z-10 rounded-b-[3rem] rounded-tr-[3rem]"></div>
             <img class="max-w-xs w-full" src="assets/img2.png">
@@ -624,6 +624,10 @@ li::before {
         top: 0px;
         height: 1600px;
     }
+  #sobrenos-bg-mobile {
+    height: 600px;
+    top: -550px;
+  }
 }
 
 @media (min-width: 320px) {
