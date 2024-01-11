@@ -39,9 +39,9 @@
   <div class="w-full h-20 bg-secondary/90 fixed px-20 lg:px-32 2xl:px-56 items-center justify-between hidden md:flex z-50">
     <img src="assets/logo.svg">
     <div class="flex gap-4">
-      <a href="#parceiros-canais"><button class="bg-white text-secondary rounded-full w-fit h-7 text-xs px-2">Parceiros e Canais</button></a>
       <a href="#servicos"><button class="bg-white text-secondary rounded-full w-20 h-7 text-xs">Serviços</button></a>
       <a href="#sobrenos"><button class="bg-white text-secondary rounded-full w-20 h-7 text-xs">Sobre nós</button></a>
+      <a href="#parceiros-canais"><button class="bg-white text-secondary rounded-full w-fit h-7 text-xs px-2">Parceiros e Canais</button></a>
       <a href="#contato"><button class="bg-white text-secondary rounded-full w-20 h-7 text-xs">Contato</button></a>
     </div>
   </div>
@@ -89,7 +89,7 @@
 
     </div>
 
-    <div class="py-20 md:py-28 lg:py-16 relative">
+    <div class="py-10 md:py-14 lg:py-16 relative">
     </div>
     
     <section id="servicos" class="py-14"></section>
@@ -104,21 +104,31 @@
         <p class="text-primary font-black text-3xl md:text-6xl lg:text-7xl ">Nossas Soluções</p>
 
         <!-- Mobile -->
-        <div class="flex lg:hidden gap-10 2xl:gap-6 mt-10 md:mt-20">
-          <div id="ball1" @click="openModal(1)" class="w-8 h-8 md:w-12 md:h-12 md:-top-8 rounded-full shadow-md animate-bounce bg-white">
-            <img v-if="showBall1" class="relative w-4 md:w-6 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2"
-              :src="'/programmingarrows.svg'">
+        <div class="flex lg:hidden gap-4 sm:gap-10 2xl:gap-6 mt-10 md:mt-20">
+          <div class="flex flex-col justify-between items-center gap-3">
+            <div id="ball1" @click="openModal(1)" class="w-8 h-8 md:w-12 md:h-12 md:-top-8 rounded-full shadow-md animate-bounce bg-white">
+              <img v-if="showBall1" class="relative w-4 md:w-6 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2"
+                :src="'/programmingarrows.svg'">
+            </div>
+            <p class="w-[80px] sm:w-[140px] h-1/2 text-center text-white font-light text-[8pt]">Serviços de implementação Consultorias Projetos</p>
           </div>
-
-          <div v-if="showBall2" id="ball2" class="w-8 h-8 md:w-12 md:h-12 md:-top-8 rounded-full shadow-md animate-bounce bg-white">
-            <img @click="openModal(2)" class="relative w-4 md:w-6 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2"
-              :src="'/codecircle.svg'">
+          
+          <div class="flex flex-col justify-between items-center gap-3">
+            <div v-if="showBall2" id="ball2" class="w-8 h-8 md:w-12 md:h-12 md:-top-8 rounded-full shadow-md animate-bounce bg-white">
+              <img @click="openModal(2)" class="relative w-4 md:w-6 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2"
+                :src="'/codecircle.svg'">
+            </div>
+            <p class="w-[80px] h-1/2 text-center text-white font-light text-[8pt]">Software Interações</p>
           </div>
-
-          <div v-if="showBall3" id="ball3" class="w-8 h-8 md:w-12 md:h-12 md:-top-8 rounded-full shadow-md animate-bounce bg-white">
-            <img @click="openModal(3)" class="relative w-4 md:w-6 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2"
-              :src="'/candle.svg'">
+          
+          <div class="flex flex-col justify-between items-center gap-3">
+            <div v-if="showBall3" id="ball3" class="w-8 h-8 md:w-12 md:h-12 md:-top-8 rounded-full shadow-md animate-bounce bg-white">
+              <img @click="openModal(3)" class="relative w-4 md:w-6 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2"
+                :src="'/candle.svg'">
+            </div>
+            <p class="w-[80px] h-1/2 text-center text-white font-light text-[8pt]">Portfólio Dispositivos Acessórios</p>
           </div>
+          
 
         </div>
 
@@ -129,8 +139,33 @@
             <div class="leaf-bottom-right w-9 h-9 mlg:w-11 mlg:h-11 md:w-20 md:h-20 2xl:w-36 2xl:h-36 bg-white"></div>
             <div class="leaf-top-right w-9 h-9 mlg:w-11 mlg:h-11 md:w-20 md:h-20 2xl:w-36 2xl:h-36 bg-primary"></div>
           </div>
+          <div class="flex gap-10 2xl:gap-6 mt-10 md:mt-20">
+            <div class="flex flex-col justify-between items-center gap-3">
+              <div id="ball1" @click="openModal(1)" class="w-16 min-h-[64px] xl:w-20 xl:min-h-[80px] rounded-full shadow-md bg-white">
+                <img v-if="showBall1" class="relative w-10 xl:w-12 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2"
+                  :src="'/programmingarrows.svg'">
+              </div>
+              <p class="w-[140px] h-1/2 text-center text-white font-light text-[8pt] xl:text-[10pt]">Serviços de implementação Consultorias Projetos</p>
+            </div>
 
-          <div
+            <div class="flex flex-col justify-between items-center gap-3">
+              <div v-if="showBall2" id="ball2" class="w-16 min-h-[64px] xl:w-20 xl:min-h-[80px] rounded-full shadow-md  bg-white">
+                <img @click="openModal(2)" class="relative w-10 xl:w-12 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2"
+                  :src="'/codecircle.svg'">
+              </div>
+              <p class="w-[140px] h-1/2 text-center text-white font-light text-[8pt] xl:text-[10pt]">Software Interações</p>
+            </div>
+
+            <div class="flex flex-col justify-between items-center gap-3">
+              <div v-if="showBall3" id="ball3" class="w-16 min-h-[64px] xl:w-20 xl:min-h-[80px] rounded-full shadow-md  bg-white">
+                <img @click="openModal(3)" class="relative w-10 xl:w-12 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2"
+                  :src="'/candle.svg'">
+              </div>
+              <p class="w-[140px] h-1/2 text-center text-white font-light text-[8pt] xl:text-[10pt]">Portfólio Dispositivos Acessórios</p>
+            </div>
+        </div>
+
+          <!-- <div
             class="relative w-20 h-fit md:w-36 lg:w-56 2xl:w-80  rounded-2xl bg-primary mt-4 shadow-md p-8"
             @click="openModal(1)"
           >
@@ -144,8 +179,6 @@
               <li>Serviços de Implantação</li>
               <li>Projetos</li>
               <li>Consultorias</li>
-              <!-- <li>POC – Provas de Conceito da tecnologia e índice de aderência</li>
-              <li>MVP – Validação da tecnologia utilizando um Produto Mínimo Viável</li> -->
             </ul>
           </div>
 
@@ -161,8 +194,6 @@
               class="text-white font-light text-[4pt] md:text-xs lg:text-sm 2xl:text-xl p-5 pt-6 md:pt-10 w-full flex flex-col md:gap-2">
               <li>Solução completa de Software</li>
               <li>Integrações</li>
-              <!-- <li>V.Station – Software autônomo sem necessidade de integração para conferência de materiais e packings de
-                terceiros</li> -->
             </ul>
           </div>
 
@@ -179,10 +210,8 @@
               <li>Portfólio de Equipamentos</li>
               <li>dispositivos</li>
               <li>acessórios</li>
-              <!-- <li>Portais</li>
-              <li>Antenas, Cabos e Suportes</li> -->
             </ul>
-          </div>
+          </div> -->
 
           <div class="hidden mmd:flex flex-col gap-1 mlg:gap-2 md:gap-4 items-center justify-center md:ml-2">
             <div class="leaf-bottom-left w-9 h-9 mlg:w-11 mlg:h-11 md:w-20 md:h-20 2xl:w-36 2xl:h-36 bg-white"></div>
@@ -208,7 +237,7 @@
           industriais e
           logístico, focando os desafios dos segmentos Metalmecânico, Plástico e Celulose.
 
-          <img class="rounded-full" src="https://i.pinimg.com/originals/8a/90/98/8a909882b3c6a2fcba6e1d4a42dabd42.jpg"/>
+          <img class="rounded-r-full rounded-bl-full" src="https://i.pinimg.com/originals/8a/90/98/8a909882b3c6a2fcba6e1d4a42dabd42.jpg"/>
 
           
           Através do foco em segmentos chaves conseguimos evoluir cada vez mais nossas soluções, elevando sempre o índice
@@ -230,7 +259,7 @@
         Sobre nós
       </div>
 
-      <div class="font-black text-xl md:text-6xl text-white w-full max-w-[270px]  md:max-w-[540px]">Nativos em RFID</div>
+      <div class="font-black text-xl md:text-6xl text-white w-full max-w-[270px]  md:max-w-[540px]">Especialistas em RFID</div>
 
       <div class="text-justify text-[10px] md:text-xl text-white mt-4 font-light max-w-[270px] md:max-w-[540px]">
         A Valesoft é uma empresa pertencente ao grupo <strong>Desafio Agora</strong>, que por mais de 7 anos atua e domina
@@ -254,7 +283,7 @@
       </div>
 
       <div class="relative flex gap-4 mt-11 justify-around">
-        <div class="absolute bg-primary w-screen h-[650px] -z-10 -top-[550px] md:-top-[500px]"></div>
+        <div class="absolute bg-primary w-screen h-[450px] -z-10 -top-[350px] md:-top-[700px] md:h-[850px]"></div>
 
         <div class="relative w-40 md:w-full h-fit z-0 flex justify-end">
           <div class="relative">
@@ -262,39 +291,39 @@
             <img class="w-full max-w-[135px] md:max-w-[220px]" src="assets/img2.png">
           </div>
         </div>
-        
-        <div class="relative w-40 md:w-full h-fit z-0 flex justify-end">
-          <div class="relative">
-            <div class="absolute bg-primary rounded-full w-5 h-5 md:w-11 md:h-11 flex items-center justify-center shadow-lg left-2 top-2">
-              <img class="w-3 h-3 md:w-6 md:h-6" src="assets/medalstar.svg">
-            </div>
-            <img class="w-full max-w-[135px] md:max-w-[220px]" src="assets/img3.png">
-            <div
-              class="leaf-top-right w-9 h-9 md:w-16 md:h-16 bg-secondary absolute z-10 right-0 -bottom-2">
-            </div>
-          </div>
-        </div>
-
       </div>
 
       <div class="text-justify text-[10px] md:text-xl text-black mt-8 font-light max-w-[270px] md:max-w-[540px]">
-        Programa de Parceira com <strong>Integradores</strong> e <strong>Canais Revenda</strong>.
+        <div class="flex text-[7px] md:text-base font-light text-black gap-1 w-full max-w-3xl items-center justify-start">
+          <p>Clientes | Parceiros</p>
+        </div>
+
+        <div class="font-black text-xl text-primary w-full md:text-6xl lg:text-7xl break-words flex text-left">
+          <p>Parceria que impulsiona</p>
+        </div>
         <br>
-        <br>
-        A <strong>Valesoft</strong> possui um programa amplo de parcerias de negócios, modelados para melhor atender cada
-        extensão de nossa
+        A <strong>Valesoft</strong> possui um programa amplo de parcerias de negócios, modelados para melhor atender
+        cada extensão de nossa
         atuação no mercado.
         <br>
         <br>
-        Por meio de nossos parceiros <strong>Integradores</strong>, abrimos nosso portfólio de consultoria especializada e
-        fornecimento de
-        equipamentos, permitindo que possa focar no escopo de negócio de seus projetos podendo contar com a Valesoft em
+        Por meio de nossos parceiros <strong>Integradores</strong>, abrimos nosso portfólio de consultoria
+        especializada e fornecimento de
+        equipamentos, permitindo que possa focar no escopo de negócio de seus projetos podendo contar com a Valesoft
+        em
         sua composição de solução.
-        <br>
-        <br>
-        Nossos Canais Revenda possuem acesso ao nosso portfólio completo de software, serviços e equipamentos, onde pode
-        atuar com solução em formato <i>White Label</i>, permitindo que escalem sua força de vendas e time de entrega de
-        projetos.
+      </div>
+
+      <div class="relative w-40 md:w-full h-fit z-0 flex justify-end py-4">
+        <div class="relative">
+          <div class="absolute bg-primary rounded-full w-5 h-5 md:w-11 md:h-11 flex items-center justify-center shadow-lg left-2 top-2">
+            <img class="w-3 h-3 md:w-6 md:h-6" src="assets/medalstar.svg">
+          </div>
+          <img class="w-full max-w-[135px] md:max-w-[220px]" src="assets/img3.png">
+          <div
+            class="leaf-top-right w-9 h-9 md:w-16 md:h-16 bg-secondary absolute z-10 right-0 -bottom-2">
+          </div>
+        </div>
       </div>
 
     </div>
@@ -302,18 +331,16 @@
     <!-- Sobre nós Desktop-->
     <div class="container mx-auto p-4 hidden lg:block">
 
-      <div class="flex text-[7px] md:text-base font-light text-white gap-1 w-full max-w-3xl">
-        <img class="md:w-4 md:h-4" src="assets/people.svg">
-        Sobre nós
-      </div>
-
-      <div class="font-black text-xl text-white w-full md:text-6xl lg:text-7xl break-words max-w-3xl">Nativos em RFID</div>
-
       <div class="grid grid-cols-2 gap-32">
 
         <div class="relative col-span-1 mt-8">
-          <div id="sobrenos-bg-desktop" class="absolute w-screen h-[450px] top-40 bg-primary -z-10 -left-36 2xl:-left-60"></div>
-          <div class="text-justify text-[10px] md:text-xl text-white font-light max-w-md">
+          <div id="sobrenos-bg-desktop" class="absolute w-screen h-[900px] lg:h-[700px] xl:h-[400px] mt-56 bg-primary -z-10 -left-36 2xl:-left-60"></div>
+          <div class="flex text-[7px] md:text-base font-light text-white gap-1 w-full max-w-3xl">
+            Sobre nós
+          </div>
+          <div class="font-black text-xl text-white w-full md:text-6xl lg:text-7xl break-words">Especialistas em RFID</div>
+          <br>
+          <div class="text-justify text-[10px] md:text-xl text-white font-light max-w-lg">
             A Valesoft é uma empresa pertencente ao grupo <strong>Desafio Agora</strong>, que por mais de 7 anos atua e
             domina o mercado Latino
             Americano com fornecimento de tecnologia RFID no segmento de cronometragem esportiva.
@@ -343,23 +370,28 @@
     <div class="relative">
       <section id="parceiros-canais" class="absolute -top-10"></section>
     </div>
-    <div class="w-full  lg:mt-36 2xl:mt-44">
-        <div class="flex text-[7px] md:text-base font-light text-black gap-1 w-full max-w-3xl items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" data-slot="icon" class="md:w-4 md:h-4">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6.633 10.25c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 0 1 2.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 0 0 .322-1.672V2.75a.75.75 0 0 1 .75-.75 2.25 2.25 0 0 1 2.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282m0 0h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 0 1-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 0 0-1.423-.23H5.904m10.598-9.75H14.25M5.904 18.5c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 0 1-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 9.953 4.167 9.5 5 9.5h1.053c.472 0 .745.556.5.96a8.958 8.958 0 0 0-1.302 4.665c0 1.194.232 2.333.654 3.375Z" />
-          </svg>
-          <p>Parceiros e Canais</p>
-        </div>
-
-        <div class="font-black text-xl text-primary w-full md:text-6xl lg:text-7xl break-words ">Parceria Canalizada</div>
-
+    <div class="w-full lg:mt-36 2xl:mt-44 lg:block hidden">
         <div class="grid grid-cols-2 gap-32">
-          <div class="col-span-1 flex items-center justify-center max-w-md">
-            <img src="https://digitalland.com.br/wp-content/uploads/2019/02/Parceiros.jpg" alt="" class="max-w-xs w-full h-[320px] rounded-full" />
+          <div class="col-span-1 flex items-center justify-center max-w-md relative">
+            <div class="relative">
+              <div class="absolute bg-primary rounded-full w-5 h-5 md:w-14 md:h-14 flex items-center justify-center shadow-lg left-5 top-5">
+                <img class="w-3 h-3 md:w-10 md:h-10" src="assets/medalstar.svg">
+              </div>
+              <img src="https://digitalland.com.br/wp-content/uploads/2019/02/Parceiros.jpg" alt="" class="max-w-xs w-full h-[320px] rounded-full" />
+            </div>
+            
           </div>
 
           <div class="col-span-1 flex items-center justify-center">
-            <div class="text-justify text-[10px] md:text-xl text-black mt-4 lg:mt-36 2xl:mt-44 h-full max-w-md font-light">
+            <div class="text-justify text-[10px] md:text-xl text-black mt-4 lg:mt-36 2xl:mt-44 h-full max-w-lg font-light">
+              <div class="flex text-[7px] md:text-base font-light text-black gap-1 w-full max-w-3xl items-center justify-end">
+                <p>Clientes | Parceiros</p>
+              </div>
+
+              <div class="font-black text-xl text-primary w-full md:text-6xl lg:text-7xl break-words flex text-right">
+                <p>Parceria que impulsiona</p>
+              </div>
+              <br>
               A <strong>Valesoft</strong> possui um programa amplo de parcerias de negócios, modelados para melhor atender
               cada extensão de nossa
               atuação no mercado.
@@ -376,17 +408,16 @@
       </div>
     
     <Carousel class="max-w-[270px]  md:max-w-[540px] lg:max-w-full">
-      <li><img class="lg:w-28 md:w-20 w-12 lg:h-9 h-5 md:h-6" src="/CHAINWAY_LOGO.png" /></li>
-      <li><img class="lg:w-36 md:w-24 w-12 lg:h-9 h-5 md:h-6" src="/CINNCO_LOGO.png" /></li>
-      <li><img class="lg:w-28 md:w-20 w-12 lg:h-9 h-5 md:h-6" src="/PRIME_LOGO.png" /></li>
-      <li><img class="lg:w-28 md:w-20 w-12 lg:h-9 h-5 md:h-6" src="/SATO_LOGO.png" /></li>
-      <li><img class="lg:w-28 md:w-20 w-12 lg:h-9 h-5 md:h-6" src="/ZEBRA_LOGO.png" /></li>
-      <li><img class="lg:w-28 md:w-20 w-12 lg:h-9 h-5 md:h-6" src="/AD_LOGO.png" /></li>
-      <li><img class="lg:w-36 md:w-24 w-12 lg:h-9 h-5 md:h-6 bg-red-500" /></li>
-      <li><img class="lg:w-28 md:w-20 w-12 lg:h-9 h-5 md:h-6 bg-blue-500" /></li>
-      <li><img class="lg:w-28 md:w-20 w-12 lg:h-9 h-5 md:h-6 bg-pink-500" /></li>
-      <li><img class="lg:w-28 md:w-20 w-12 lg:h-9 h-5 md:h-6 bg-gray-500" /></li>
-      <li><img class="lg:w-28 md:w-20 w-12 lg:h-9 h-5 md:h-6 bg-purple-500" /></li>
+      <li><img class="lg:w-28 md:w-20 w-12 lg:h-9 h-5 md:h-6" src="/abc.png" /></li>
+      <li><img class="lg:w-36 md:w-24 w-12 lg:h-9 h-5 md:h-6" src="/advantag.png" /></li>
+      <li><img class="lg:w-28 md:w-20 w-12 lg:h-9 h-5 md:h-6" src="/avery.png" /></li>
+      <li><img class="lg:w-28 md:w-20 w-12 lg:h-9 h-5 md:h-6" src="/chainway.png" /></li>
+      <li><img class="lg:w-28 md:w-20 w-12 lg:h-9 h-5 md:h-6" src="/cinnco.png" /></li>
+      <li><img class="lg:w-28 md:w-20 w-12 lg:h-9 h-5 md:h-6" src="/prime.png" /></li>
+      <li><img class="lg:w-36 md:w-24 w-12 lg:h-9 h-5 md:h-6" src="/projeta.png" /></li>
+      <li><img class="lg:w-28 md:w-20 w-12 lg:h-9 h-5 md:h-6" src="/sato.png" /></li>
+      <li><img class="lg:w-28 md:w-20 w-12 lg:h-9 h-5 md:h-6" src="/tsc.png" /></li>
+      <li><img class="lg:w-28 md:w-20 w-12 lg:h-9 h-5 md:h-6" src="/zabra.png" /></li>
     </Carousel>
 
     <section id="contato" class="py-7 md:py-14"></section>
@@ -576,126 +607,126 @@ li::before {
 
 @media (min-width: 285px) {
   #main-content::before {
-        top: 300px;
+        top: 0px;
         height: 1700px;
     }
 }
 
 @media (min-width: 299px) {
   #main-content::before {
-        top: 250px;
+        top: 0px;
         height: 1600px;
     }
 }
 
 @media (min-width: 309px) {
   #main-content::before {
-        top: 200px;
+        top: 0px;
         height: 1600px;
     }
 }
 
 @media (min-width: 320px) {
   #main-content::before {
-        top: 250px;
+        top: 0px;
         height: 1600px;
     }
 }
 
 @media (min-width: 329px) {
   #main-content::before {
-    top: 220px;
+    top: 0px;
         height: 1550px;
     }
 }
 
 @media (min-width: 345px) {
   #main-content::before {
-        top: 220px;
+        top: 0px;
         height: 1450px;
     }
 }
 
 @media (min-width: 366px) {
   #main-content::before {
-        top:200px;
+        top:0px;
         height: 1450px;
     }
 }
 
 @media (min-width: 388px) {
   #main-content::before {
-    top: 140px;
+    top: 0px;
         height: 1450px;
     }
 }
 
 @media (min-width: 768px) {
   #main-content::before {
-        top: 380px;
+        top: 250px;
         height: 2250px;
     }
 }
 
 @media (min-width: 800px) {
   #main-content::before {
-        top: 380px;
+        top: 250px;
         height: 2200px;
     }
 }
 
 @media (min-width: 810px) {
   #main-content::before {
-        top: 370px;
+        top: 240px;
         height: 2250px;
     }
 }
 
 @media (min-width: 830px) {
   #main-content::before {
-        top: 380px;
+        top: 250px;
         height: 2200px;
     }
 }
 
 @media (min-width: 855px) {
   #main-content::before {
-        top: 380px;
+        top: 250px;
         height: 2150px;
     }
 }
 
 @media (min-width: 865px) {
   #main-content::before {
-        top: 320px;
+        top: 190px;
         height: 2150px;
     }
 }
 
 @media (min-width: 894px) {
   #main-content::before {
-        top: 350px;
+        top: 220px;
         height: 2150px;
     }
 }
 
 @media (min-width: 898px) {
   #main-content::before {
-        top: 310px;
+        top: 180px;
         height: 2150px;
     }
 }
 
 @media (min-width: 960px) {
   #main-content::before {
-        top: 330px;
+        top: 200px;
         height: 2150px;
     }
 }
 
 @media (min-width: 990px) {
   #main-content::before {
-        top: 340px;
+        top: 210px;
         height: 2150px;
     }
 }
@@ -726,15 +757,15 @@ li::before {
         top: 100px;
         height: 2900px;
     }
-    #sobrenos-bg-desktop {
-      top: 6rem;
-    }
 }
 
 @media (min-width: 1200px) {
   #main-content::before {
         top: 80px;
         height: 2950px;
+    }
+    #sobrenos-bg-desktop {
+      height: 600px;
     }
 }
 
@@ -744,7 +775,7 @@ li::before {
         height: 2900px;
     }
     #sobrenos-bg-desktop {
-      top: 2rem;
+      height: 400px;
     }
 }
 

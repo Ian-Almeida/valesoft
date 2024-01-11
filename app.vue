@@ -5,8 +5,10 @@
 </template>
 
 <style>
+/* https://codepen.io/Coding_Journey/pen/yWjWKd */
 html {
    font-family: "Montserrat";
+   @apply scroll-smooth;
 }
 
 .leaf-top-right {
