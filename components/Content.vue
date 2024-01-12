@@ -141,7 +141,7 @@
           </div>
           <div class="flex gap-10 2xl:gap-6 mt-10 md:mt-20">
             <div class="flex flex-col justify-between items-center gap-3">
-              <div id="ball1" @click="openModal(1)" class="w-16 min-h-[64px] xl:w-20 xl:min-h-[80px] rounded-full shadow-md bg-white">
+              <div id="ball1" @click="openModal(1)" class="w-16 min-h-[64px] xl:w-20 xl:min-h-[80px] rounded-full shadow-md bg-white hover:bg-gray-300 hover:cursor-pointer">
                 <img v-if="showBall1" class="relative w-10 xl:w-12 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2"
                   :src="'/programmingarrows.svg'">
               </div>
@@ -149,7 +149,7 @@
             </div>
 
             <div class="flex flex-col justify-between items-center gap-3">
-              <div v-if="showBall2" id="ball2" class="w-16 min-h-[64px] xl:w-20 xl:min-h-[80px] rounded-full shadow-md  bg-white">
+              <div v-if="showBall2" id="ball2" class="w-16 min-h-[64px] xl:w-20 xl:min-h-[80px] rounded-full shadow-md  bg-white hover:bg-gray-300 hover:cursor-pointer">
                 <img @click="openModal(2)" class="relative w-10 xl:w-12 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2"
                   :src="'/codecircle.svg'">
               </div>
@@ -157,7 +157,7 @@
             </div>
 
             <div class="flex flex-col justify-between items-center gap-3">
-              <div v-if="showBall3" id="ball3" class="w-16 min-h-[64px] xl:w-20 xl:min-h-[80px] rounded-full shadow-md  bg-white">
+              <div v-if="showBall3" id="ball3" class="w-16 min-h-[64px] xl:w-20 xl:min-h-[80px] rounded-full shadow-md  bg-white hover:bg-gray-300 hover:cursor-pointer">
                 <img @click="openModal(3)" class="relative w-10 xl:w-12 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2"
                   :src="'/candle.svg'">
               </div>
@@ -259,7 +259,7 @@
         Sobre nós
       </div>
 
-      <div class="font-black text-xl md:text-6xl text-white w-full max-w-[270px]  md:max-w-[540px]">Especialistas em RFID</div>
+      <div class="font-black text-xl md:text-6xl text-white w-full max-w-[270px]  md:max-w-[540px]">Nativos em RFID</div>
 
       <div class="text-justify text-[10px] md:text-xl text-white mt-4 font-light max-w-[270px] md:max-w-[540px]">
         A Valesoft é uma empresa pertencente ao grupo <strong>Desafio Agora</strong>, que por mais de 7 anos atua e domina
@@ -338,7 +338,7 @@
           <div class="flex text-[7px] md:text-base font-light text-white gap-1 w-full max-w-3xl">
             Sobre nós
           </div>
-          <div class="font-black text-xl text-white w-full md:text-6xl lg:text-7xl break-words">Especialistas em RFID</div>
+          <div class="font-black text-xl text-white w-full md:text-6xl lg:text-7xl break-words">Nativos em RFID</div>
           <br>
           <div class="text-justify text-[10px] md:text-xl text-white font-light max-w-lg">
             A Valesoft é uma empresa pertencente ao grupo <strong>Desafio Agora</strong>, que por mais de 7 anos atua e
@@ -357,7 +357,7 @@
         <div class="col-span-1 flex items-center justify-end max-w-md">
           <div class="relative">
             <div class=" w-28 h-28 bg-secondary absolute left-0 -z-10 rounded-b-[3rem] rounded-tr-[3rem]"></div>
-            <img class="max-w-xs w-full" src="assets/img2.png">
+            <img class="max-w-sm w-full" src="assets/img2.png">
             <div
               class=" w-32 h-32 bg-secondary absolute z-10 right-0 -bottom-6 rounded-b-[3rem] rounded-tl-[3rem]">
             </div>
@@ -377,7 +377,7 @@
               <div class="absolute bg-primary rounded-full w-5 h-5 md:w-14 md:h-14 flex items-center justify-center shadow-lg left-5 top-5">
                 <img class="w-3 h-3 md:w-10 md:h-10" src="assets/medalstar.svg">
               </div>
-              <img src="https://digitalland.com.br/wp-content/uploads/2019/02/Parceiros.jpg" alt="" class="max-w-xs w-full h-[320px] rounded-full" />
+              <img src="https://digitalland.com.br/wp-content/uploads/2019/02/Parceiros.jpg" alt="" class="max-w-sm w-full h-[384px] rounded-full" />
             </div>
             
           </div>
@@ -737,35 +737,41 @@ li::before {
 
 @media (min-width: 1024px) {
   #main-content::before {
-        top: 110px;
+        top: 60px;
         height: 3000px;
     }
 }
 
 @media (min-width: 1068px) {
   #main-content::before {
-        top:110px;
+        top: 60px;
         height: 3000px;
     }
 }
 
 @media (min-width: 1085px) {
   #main-content::before {
-        top:110px;
+        top: 60px;
         height: 2900px;
+    }
+    #sobrenos-bg-desktop {
+      height: 600px;
     }
 }
 
 @media (min-width: 1100px) {
   #main-content::before {
-        top: 100px;
+        top: 50px;
         height: 2900px;
+    }
+    #sobrenos-bg-desktop {
+      height: 500px;
     }
 }
 
 @media (min-width: 1200px) {
   #main-content::before {
-        top: 80px;
+        top: 30px;
         height: 2950px;
     }
     #sobrenos-bg-desktop {
@@ -775,7 +781,7 @@ li::before {
 
 @media (min-width: 1260px) {
   #main-content::before {
-        top: 98px;
+        top: 50px;
         height: 2900px;
     }
     #sobrenos-bg-desktop {
@@ -785,14 +791,14 @@ li::before {
 
 @media (min-width: 1536px) {
   #main-content::before {
-        top: 80px;
+        top: 30px;
         height: 3000px;
     }
 }
 
 @media (min-width: 1800px) {
   #main-content::before {
-        top: 100px;
+        top: 50px;
         height: 3000px;
     }
 }

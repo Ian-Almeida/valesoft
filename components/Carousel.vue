@@ -22,7 +22,6 @@ const setNumberofElements = () => {
   const marqueeContent = document.querySelector("ul.marquee-content");
 
   
-  console.log(screenWidth.value)
   if (screenWidth.value < 1024) {
     root.style.setProperty("--marquee-elements", marqueeContent.children.length*1.5);
   } else if (screenWidth.value >= 1024 && screenWidth.value < 1280) {
@@ -42,7 +41,6 @@ onMounted(() => {
   nextTick(() => {
       
     setNumberofElements();
-    console.log(root.style.getPropertyValue('--marquee-elements'))
   })
 })
 </script>
